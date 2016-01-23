@@ -12,7 +12,7 @@ class Application extends Controller {
   def index = Action {
     RelativisticModel.select()
     val m = Amount.valueOf("12 GeV").to(KILOGRAM)
-    val testRelativity = s"E=mc^2: 12 GeV = $m"
+    val testRelativity = s"E=mc^2: 12 GeV = $m => Cosmic"
     Ok(views.html.index(testRelativity))
   }
 
