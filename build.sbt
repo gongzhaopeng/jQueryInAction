@@ -8,7 +8,8 @@ scalaVersion := "2.11.7"
 
 libraryDependencies ++= Seq(
   jdbc,
-  cache
+  cache,
+  "org.jscience" % "jscience" % "4.3.1"
 )
 
 routesGenerator := InjectedRoutesGenerator
