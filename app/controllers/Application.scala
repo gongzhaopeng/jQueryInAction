@@ -16,7 +16,7 @@ class Application extends Controller {
     RelativisticModel.select()
     val energy = scala.util.Properties.envOrElse("ENERGY", "12 GeV")
     val m = Amount.valueOf(energy).to(KILOGRAM)
-    val testRelativity = s"E=mc^2: $energy = $m => Cosmic"
+    val testRelativity = s"E=mc^2: $energy = $m => Cosmic => Cell"
     Ok(views.html.index(testRelativity))
   }
 
