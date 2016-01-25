@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New image example - jQuery in Action, 3rd edition</title>
+    <link rel="stylesheet" href="../stylesheets/main.css"/>
+    <style>
+        img
+        {
+            display: block;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+
+<script src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
+<script>
+    window.jQuery ||
+    document.write('<script src="../javascripts/jquery.min.js"><\/script>');
+
+    $(
+            '<img>',
+            {
+                src: '../images/airplane.jpg',
+                alt: 'Little Bear',
+                title:'I woof in your general direction',
+                click: function() {
+                    alert($(this).attr('title'));
+                }
+            }
+    ).appendTo("body");
+</script>
+</body>
+</html>
