@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8" />
+      <title>Simple Share Widget - jQuery in Action, 3rd edition</title>
+      <link rel="stylesheet" href="../stylesheets/main.css" />
+      <style>
+         .share-widget
+         {
+            position: relative;
+            margin-top: 100px;
+         }
+
+         .socials
+         {
+            position: absolute;
+            bottom: 30px;
+            padding: 20px;
+            margin-bottom: 10px;
+            background-color: #550910;
+            color: #FFFFFF;
+         }
+
+         .button
+         {
+            background-color: #550910;
+            color: #FFFFFF;
+            padding: 10px 20px;
+            cursor: pointer;
+            border: none;
+         }
+
+         .hidden
+         {
+            display: none;
+         }
+      </style>
+   </head>
+   <body>
+      <h1>Simple share widget</h1>
+      <p>
+         Click on the "Share" button to share our page!
+      </p>
+      <div class="share-widget">
+         <div class="socials hidden">Social buttons goes here!</div>
+         <button class="button">Share</button>
+      </div>
+
+      <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+      <script>
+         window.jQuery ||
+         document.write('<script src="../javascripts/jquery.min.js"><\/script>');
+
+         $('.share-widget').click(function() {
+            $('.socials', this).toggleClass('hidden');
+         });
+      </script>
+   </body>
+</html>
