@@ -1,6 +1,6 @@
 html
 {
-   background: url('../../images/backg.png') repeat;
+   background: url('../../images/c10/backg.png') repeat;
    color: white;
 }
 
@@ -14,7 +14,7 @@ body
 #banner
 {
    margin: auto;
-   background: url('../../images/banner-boot-closet.png') no-repeat 50%;
+   background: url('../../images/c10/banner-boot-closet.png') no-repeat 50%;
    width: 100%;
    height: 45px;
 }

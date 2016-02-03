@@ -1,0 +1,36 @@
+@(boot: services.Boot)
+
+<ul class="boot-description">
+  <li>
+    <span class="property">Item name:</span>
+    @boot.name
+  </li>
+  <li>
+    <span class="property">SKU:</span>
+    <span class="value">@boot.sku</span>
+  </li>
+  <li>
+    <span class="property">Height:</span>
+    <span class="value">@boot.height</span>
+  </li>
+  <li>
+    <span class="property">Colors:</span>
+    <span class="value">@boot.colors</span>
+  </li>
+  <li>
+    <span class="property">Lining:</span>
+    <span class="value">@boot.lining</span>
+  </li>
+  <li>
+    <span class="property">Today's price:</span>
+    <span class="value">@boot.price</span>
+  </li>
+  <li>
+    <span class="property">Features:</span>
+    <span class="value">@boot.features</span>
+  </li>
+</ul>
+
+<div>
+  <img id="item-photo" src='@routes.Assets.at("images/c10/" + boot.sku + ".png")' />
+</div>
