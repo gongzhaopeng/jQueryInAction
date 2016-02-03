@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8" />
+      <title>The Boot Closet - Phase 2</title>
+      <link rel="stylesheet" href="../../stylesheets/main.css" />
+      <link rel="stylesheet" href="../../stylesheets/c10/bootcloset.css">
+   </head>
+   <body>
+      <div id="banner"></div>
+
+      <h1>Choose your boots</h1>
+      <div>
+         <div id="selections-pane">
+            <label for="boot-chooser-control">Boot style:</label>
+            <select id="boot-chooser-control" name="model"></select>
+         </div>
+         <div id="product-detail-pane"></div>
+      </div>
+
+      <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+      <script>
+          window.jQuery ||
+          document.write('<script src="../../javascripts/jquery.min.js"><\/script>');
+
+         $('#boot-chooser-control')
+                 .load('boot-style-options.html')
+                 .change(function(event) {
+                    $.get(
+                            '/bootcloset/detail',
+                            {
+                               model: $(event.target).val()
+                            },
+                            function(response) {
+                               $('#product-detail-pane').html(response);
+                               $('[value=""]', event.target).remove();
+                            }
+                    );
+                 });
+      </script>
+   </body>
+</html>
