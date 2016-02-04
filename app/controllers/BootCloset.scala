@@ -11,7 +11,7 @@ import play.api.data.Forms._
 class BootCloset extends Controller {
 
   val detailForm = Form (
-    single("model" -> nonEmptyText)
+    single("models" -> nonEmptyText)
   )
 
   def bootDetail = Action { implicit request =>

@@ -10,6 +10,9 @@ GET     /db                         controllers.Application.db
 GET     /bootcloset/detail          controllers.BootCloset.bootDetail
 POST    /bootcloset/detail          controllers.BootCloset.bootDetail
 
+# Contact
+POST    /contact/submit             controllers.ContactController.submit
+
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
 
